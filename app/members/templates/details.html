@@ -1,0 +1,22 @@
+{% extends 'master.html' %}
+
+{% block title %}
+detalhes do membro {{ x.firstname }} {{ mymember.lastname }}
+{% endblock  %}
+
+{% block content %}
+<div class="card mt-2">
+    <div class="card-heard">
+        Details about {{ mymember.firstname }} {{ mymember.lastname }}
+    </div>
+    <div class="card-body">
+        <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+
+        <p>Phone {{ mymember.phone }}</p>
+        <p>Member since: {{ mymember.joined_date }}</p>
+
+        <p><a href="/members">Voltar</a></p>
+
+    </div>
+</div>
+{% endblock %}
